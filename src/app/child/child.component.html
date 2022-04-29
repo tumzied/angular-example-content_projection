@@ -1,12 +1,17 @@
 <div style="margin-left: 1em;">
+    <p>child works</p>
+    <button (click)="toggleClick()">toggle projected content</button>
+    {{expanded}}
 
-    <div style="display: flex; justify-content: start;align-items: center;flex-direction: row ;gap: 10px; ">
-        <p>child works!</p>
+    <div *ngIf="expanded" [id]="contentId" style="display: flex; justify-content: start;align-items: center;flex-direction: row ;gap: 10px; ">
+    
 
+       
+            <ng-container [ngTemplateOutlet]="content.templateRef"></ng-container>
         
-        <ng-content></ng-content>
+
     </div>
 
-    <ng-content select="[des]"></ng-content>
+ 
     
 </div>

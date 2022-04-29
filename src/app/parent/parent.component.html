@@ -1,12 +1,13 @@
 <p>parent works!</p>
 <app-child>
+    <!-- The <ng-template> element defines a block of content that a component can render based on its own logic. -->
+    <ng-template appChildContent>
 
-    <div *ngFor="let item of items">
-        Tab {{item}}
-    </div>
-    <div des>
-        description
-    </div>
-
-    
+        <div *ngFor="let item of items">
+            Tab {{item}}
+        </div>
+        
+    </ng-template>
+ 
 </app-child>
+

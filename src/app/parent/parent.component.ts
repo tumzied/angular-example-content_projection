@@ -1,5 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 
+
+
+
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
@@ -12,7 +15,7 @@ export class ParentComponent implements OnInit {
 
 
   ngOnInit(): void {
-  this.items=new Array(19).fill(1).map((i)=>i+1);
+  this.items=new Array(2).fill(1).map((i)=>i+1);
   }
 
 }
