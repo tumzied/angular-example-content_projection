@@ -1,17 +1,9 @@
-<div style="margin-left: 1em;">
-    <p>child works</p>
-    <button (click)="toggleClick()">toggle projected content</button>
-    {{expanded}}
-
-    <div *ngIf="expanded" [id]="contentId" style="display: flex; justify-content: start;align-items: center;flex-direction: row ;gap: 10px; ">
-    
-
-       
-            <ng-container [ngTemplateOutlet]="content.templateRef"></ng-container>
-        
-
-    </div>
-
- 
-    
+<div style="margin-left: 1em">
+  <p>child works</p>
+  <button (click)="toggleClick()">toggle projected content</button>
+  {{ expanded }}
+    <!-- conditionally render the block -->
+  <div *ngIf="expanded" [id]="contentId">
+    <ng-container [ngTemplateOutlet]="content.templateRef"></ng-container>
+  </div>
 </div>
